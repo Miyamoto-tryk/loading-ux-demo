@@ -3,6 +3,7 @@ export type Props = {
 };
 
 async function fetchArticle(id: number) {
+  //* 重いローディング処理　*/
   await new Promise((res) => setTimeout(res, 1000 + Math.random() * 2000));
   return {
     title: `記事 ${id}`,
